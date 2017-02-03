@@ -1,0 +1,6 @@
+data: source time functions from scardec database
+labels: YYYY MM DD HH MM SS'.0' Latitude Longitude Depth(km) M0(N.m) Mw strike1(°) dip1(°) rake1(°) strike2(°) dip2(°) rake2(°)
+
+by SCARDEC (http://scardec.projects.sismo.ipgp.fr/)
+
+give reference to the authors!

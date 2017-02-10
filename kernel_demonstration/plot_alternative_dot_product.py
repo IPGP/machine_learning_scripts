@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import ipdb
 
 def main():
-    nsamples = 200
+    nsamples = 400
     nfeatures = 2
     kernels = [dot, dot2, RBF]
     nkernels = len(kernels)

@@ -50,7 +50,7 @@ This working groups mainly is inspired from the online book [Deep Learning](http
 * template-matching explained with kernel-trick
 * Kernel examples : RBF (Radial Basis Functions), multipolynomials, etc.
 * Illustration with many 2D examples with (x) and (.) labels
-* What is a **diretion** and an **amplitude** in high dimensional space ?
+* What is a **diretion** and an **amplitude** in high dimensional space ? What is the direction of a function ?
 * Discussions about PCA (unsupervized finding linear directions direct feature space) and KPCA (Kernel-PCA)
 
 

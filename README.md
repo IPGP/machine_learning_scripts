@@ -1,6 +1,6 @@
-# machine_learning_scripts
+# Machine Learning Course at IPGP
 
-This working groups mainly is inspired from the online book [Deep Learning](http://www.deeplearningbook.org) Ian Goodfellow, Yoshua Bengio and Aaron Courville.
+This working groups mainly is based on the online book [Deep Learning](http://www.deeplearningbook.org) by Ian Goodfellow, Yoshua Bengio and Aaron Courville.
 
 ### Course 1 (Nov, 24)
 

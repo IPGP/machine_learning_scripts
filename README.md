@@ -44,15 +44,13 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * [Kenerl-trick illustration](https://www.youtube.com/watch?v=9NrALgHFwTo)
 * Kernel Ridge Regression on microseism database: [microseisms/analysis-KRR.py](microseisms/analysis-KRR.py)
 
-
 ### Course 7 (Feb, 10)
 * Kernel-trick : theoretical overview
 * template-matching explained with kernel-trick
 * Kernel examples : RBF (Radial Basis Functions), multipolynomials, etc.
 * Illustration with many 2D examples with (x) and (.) labels
-* What is a **diretion** and an **amplitude** in high dimensional space ? What is the direction of a function ?
+* What is a **direction** and an **amplitude** in high dimensional space ? What is the direction of a function ?
 * Discussions about PCA (unsupervized finding linear directions direct feature space) and KPCA (Kernel-PCA)
-
 
 ### Course 8 (Feb, 20) 
 * Test KPCA on real dataset. This would summarize the last courses about kernel-tricks.

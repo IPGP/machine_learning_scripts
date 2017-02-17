@@ -23,7 +23,7 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 
 ### Course 4 (Jan, 20) 
 
-* Started working with SCIKIT-LEAN on real datasets
+* Started working with SCIKIT-LEARN on real datasets
 * linear regression on SCARDEC database [scardec_analysis.py](scardec/scardec_analysis.py)
   * `design matrix = (n_events, npoints_stf) = [n_samples, n_features]`
   * `label = magnitude = [n_events]`

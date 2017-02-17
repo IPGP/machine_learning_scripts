@@ -54,7 +54,7 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 
 ### Course 8 (Feb, 20) 
 * Test KPCA on real dataset. This would summarize the last courses about kernel-tricks.
-* Test k-means (see 5.8) clustering (ont the same dataset?)
+* Test k-means (see 5.8) clustering (on the same dataset?)
 * Read small transition to deep-learning (part 5.11)
 
 ### General objectives

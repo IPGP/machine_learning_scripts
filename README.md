@@ -17,6 +17,9 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 
 * Read part 3.13 (information, entropy, KL divergence)
 * Read 5.5 (loss, maximum likelihood)
+* what we learned: the model can be a probability distribution that is parametrized e.g. through its mean and variance.
+  The maximum likelihood method tries to find the model that makes the observed data most likely. I.e. for independent
+  data points, this is maximizing the product of the probabilities to observe a specific data point.
 
 ### Course 4 (Jan, 20) 
 

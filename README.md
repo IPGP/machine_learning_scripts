@@ -56,9 +56,20 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * Discussions about PCA (unsupervised, finds linear directions in feature space) and KPCA (Kernel-PCA)
 
 ### Course 8 (Feb, 20) 
-* Test KPCA on real dataset. This would summarize the last courses about kernel-tricks.
-* Test k-means (see 5.8) clustering (on the same dataset?)
-* Read small transition to deep-learning (part 5.11)
+* Came from PCA to KPCA on real dataset. 
+ * The principal component are showing the directions of the greatest variance. 
+ * The projection of the matrix onto the principal components shows which principal axes best fit the sample.
+
+* Revisited kernel-trick in 2D. 
+  * a kernal of infinite polynomial combination of features is the RBF kernel
+  * the RBF kernel selects closely-located samples in high-dimensional space)
+  * Cosine kernel looks to take into account direction only
+
+* Non-linear methods allow to better "predict the data"
+
+### Course 9 (Thu, 28)
+* Finish reading chapter 5 (move to deep learning) 
+* Move to TensorFlow 
 
 ### General objectives
 - [ ] Go towards deep leanring

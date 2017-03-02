@@ -79,7 +79,7 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
   * linear regression
   * convolutional neural network
   * 2 layered autoencoder that compares to the PCA. We might need to add some sparsity penalty to get
-    a better categorical encoding. [description of autoencoders](http://ufldl.stanford.edu/wiki/index.php/Autoencoders_and_Sparsity)
+    a better categorical encoding. [description of autoencoders](http://ufldl.stanford.edu/wiki/index.php/Autoencoders_and_Sparsity), [another description here](https://web.stanford.edu/class/cs294a/sparseAutoencoder.pdf)
 
 ### General objectives
 - [x] Go towards deep leanring

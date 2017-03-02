@@ -78,16 +78,10 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * We implemented in tensorflow:
   * linear regression
   * convolutional neural network
-  * 2 layered autoencoder that compares to the PCA
+  * 2 layered autoencoder that compares to the PCA. We might need to add some sparsity penalty to get
+    a better categorical encoding. [description of autoencoders](http://ufldl.stanford.edu/wiki/index.php/Autoencoders_and_Sparsity)
 
 ### General objectives
 - [x] Go towards deep leanring
 - [x] Move to [Tensor Flow](https://www.tensorflow.org)
-- [ ] General theory of neural networks 
-
-
-
- 
- 
-
-
+- [ ] General theory of neural networks

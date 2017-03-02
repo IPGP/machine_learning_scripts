@@ -54,9 +54,9 @@ def main():
     x = tf.placeholder(tf.float32, [None, nfeatures], name='x')
     y_label = tf.placeholder(tf.float32, [None, nfeatures], name='y_label')
 
-    autoencoder = create(x, [2])
+    autoencoder = create(x, [7, 4])
 
-    optimizer = tf.train.MomentumOptimizer(0.01, 0.001).minimize(autoencoder['cost'])
+    optimizer = tf.train.MomentumOptimizer(0.01, 0.005).minimize(autoencoder['cost'])
 
     init = tf.initialize_all_variables()
 
@@ -86,8 +86,12 @@ def main():
     # plot encoded data
     fig, (col1, col2) = plt.subplots(1, 2, sharey=True)
     col1.imshow(x0, aspect='auto')
+    edges = np.linspace(-0.5, ntrain-0.5, ntrain + 1)
     for icoeff, coeffs in enumerate(layer1_calc.T):
-        col2.plot(coeffs, range(ntrain))
+        left, right = edges[:-1], edges[1:]
+        Y = np.array([left, right]).T.flatten()
+        X = np.array([coeffs, coeffs]).T.flatten()
+        col2.plot(X, Y)
 
     # plot weights
     fig, ax = plt.subplots()
@@ -139,11 +143,18 @@ def create(x, layer_sizes):
     # the fully encoded and reconstructed value of x is here:
     reconstructed_x = next_layer_input
 
+    rho = -1 + 2. / layer_sizes[-1]
+    h = tf.tanh(encoded_x)
+    regularization = tf.square(rho - tf.reduce_mean(h))
+    beta = 1.
+    cost = (tf.sqrt(tf.reduce_mean(tf.square(x-reconstructed_x)))
+            + beta * regularization)
+
     return {
            'weights': encoding_matrices,
            'encoded': encoded_x,
            'decoded': reconstructed_x,
-           'cost': tf.sqrt(tf.reduce_mean(tf.square(x-reconstructed_x)))
+           'cost': cost
            }
 
 

@@ -68,17 +68,20 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * Non-linear methods allow to better "predict the data"
 
 ### Course 9 (Thu, 28)
-* Finish reading chapter 5 (move to deep learning) 
-* Move to TensorFlow 
+* Finished reading chapter 5 (move to deep learning)
+* machine learning algorithm:
+  * data + model + cost + optimization. Tensorflow is designed to solve this problem.
+* A high dimensional feature space is often only sparsely covered with training data. The actual
+  allowable values often live on a manifold and don't cover the whole space. Deep learning can
+  better retrieve such a manifold and there generalize better than some kind of nearest neighbour
+  algorithm which most classical non-linear machine learning algorithms are based on.
+* We implemented in tensorflow:
+  * linear regression
+  * convolutional neural network
+  * 2 layered autoencoder that compares to the PCA. We might need to add some sparsity penalty to get
+    a better categorical encoding. [description of autoencoders](http://ufldl.stanford.edu/wiki/index.php/Autoencoders_and_Sparsity), [another description here](https://web.stanford.edu/class/cs294a/sparseAutoencoder.pdf)
 
 ### General objectives
-- [ ] Go towards deep leanring
-- [ ] Move to [Tensor Flow](https://www.tensorflow.org)
-- [ ] General theory of neural networks 
-
-
-
- 
- 
-
-
+- [x] Go towards deep leanring
+- [x] Move to [Tensor Flow](https://www.tensorflow.org)
+- [ ] General theory of neural networks

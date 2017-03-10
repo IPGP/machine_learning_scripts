@@ -84,6 +84,7 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 ### Course 10 (Mar 10, 14h room 3000)
 * chapter 6
 * demonstrate tensorflow once more
+* Started drawing a [mind map](https://github.com/IPGP/machine_learning_scripts/blob/master/machinelearning.mm)
 
 ### General objectives
 - [x] Go towards deep leanring

@@ -30,7 +30,7 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * what we learned: linear regression in very high dimensional space. The coefficients of the
   learned model describe the 'gradient' of the source time function with respect to the magnitude
 
-### Course 5 (Jan, 27) 
+### Course 5 (Jan, 27)
 
 * linear regression **with regularization** on SCARDEC database [scardec-lsq+damping.py](scardec/scardec-lsq+damping.py)
 * what we learned:

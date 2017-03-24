@@ -82,9 +82,19 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
     a better categorical encoding. [description of autoencoders](http://ufldl.stanford.edu/wiki/index.php/Autoencoders_and_Sparsity), [another description here](https://web.stanford.edu/class/cs294a/sparseAutoencoder.pdf)
     
 ### Course 10 (Mar 10, 14h room 3000)
-* chapter 6
 * demonstrate tensorflow once more
 * Started drawing a [mind map](https://github.com/IPGP/machine_learning_scripts/blob/master/machinelearning.mm)
+
+### Course 11 (Mar 24, 14h room 3000)
+* Read 6 (intro) and discussed XOR problem (6.1) 
+* Introduced neural networks:
+ * unit (neuron, vector input, scalar output, activation function)
+ * layer (collection of units, can be defined with a matrix $W$ and bias $b$ with an activation function)
+ * activation function examples: ReLU, sigmoid, tanh (and linear)
+
+### Course 12 objectives
+- [ ] Solve XOR problem with TensorFlow 
+- [ ] Try TensorFlow onto SCARDEC?
 
 ### General objectives
 - [x] Go towards deep leanring

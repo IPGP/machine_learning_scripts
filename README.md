@@ -92,9 +92,10 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
  * layer (collection of units, can be defined with a matrix $W$ and bias $b$ with an activation function)
  * activation function examples: ReLU, sigmoid, tanh (and linear)
 
-### Course 12 objectives
-- [ ] Solve XOR problem with TensorFlow 
-- [ ] Try TensorFlow onto SCARDEC?
+### Course 12 (Mar 28, 16h room 3000)
+* simple neural network with TensorFlow 
+* fit sine function with neural network
+* we saw the importance of initial values
 
 ### General objectives
 - [x] Go towards deep leanring

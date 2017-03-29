@@ -7,15 +7,15 @@ import tensorflow as tf
 
 def main():
     # ---- dataset ----
-    npoints = 400
-    x0 = np.linspace(0., 10 * np.pi, npoints)
+    npoints = 200
+    x0 = np.linspace(0., 2 * np.pi, npoints)
     noise = np.random.normal(scale=0.1, size=npoints)
     y0 = (np.sin(x0) + noise)
     # y0 = noise
 
     # ---- definitions ----
     # Model
-    nnetwork = 400
+    nnetwork = 20
 
     x = tf.placeholder(tf.float32, [None, 1], name='x')
     y_label = tf.placeholder(tf.float32, [None, 1], name='y')
@@ -25,8 +25,7 @@ def main():
 
     h1 = tf.nn.tanh(tf.matmul(x, W1) + b1)
 
-
-    W2 = tf.Variable(tf.random_uniform([nnetwork, 1], -nnetwork, nnetwork))
+    W2 = tf.Variable(tf.random_uniform([nnetwork, 1], -10., 10.))
     b2 = tf.Variable(tf.zeros([1]))
 
     y = tf.matmul(h1, W2) + b2
@@ -35,8 +34,8 @@ def main():
     cost = tf.reduce_mean(tf.square(y_label - y))
 
     # optimizer
-    stepsize = 0.001
-    optimizer = tf.train.GradientDescentOptimizer(stepsize).minimize(cost)
+    stepsize = 0.1
+    optimizer = tf.train.AdamOptimizer(stepsize).minimize(cost)
 
     # ---- run tensorflow ----
     init = tf.initialize_all_variables()

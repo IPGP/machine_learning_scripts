@@ -35,13 +35,8 @@ def main():
     print(nsamples, nfeatures)
 
     # Number of examples to use for training
-    # ntrain = 1000
     ntrain = 400
 
-    # label indices:
-    # 0: year, 1: month, 2:day, 3:hour, 4:min, 5:sec, 6:lat, 7:lon
-    # 8: depth, 9: M0, 10: Mw, 11:strike1, 12: dip1, 13: rake1, 14:strike2,
-    # 15:dip2, 16:rake2
     plot(design_matrix, labels, ntrain)
 
     # normalize each row of the design matrix

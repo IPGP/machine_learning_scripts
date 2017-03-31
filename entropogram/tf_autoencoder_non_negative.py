@@ -6,20 +6,6 @@ import tensorflow as tf
 import math
 
 
-def plot(matrix, ntrain=None):
-    nsamples, nfeatures = matrix.shape
-    fig, (col1) = plt.subplots(1, 1, sharey=True)
-    col1.autoscale(False)
-    col1.set_xlim((0, nfeatures))
-    col1.set_ylim((0, nsamples))
-    matrix_normed = matrix / np.max(matrix, axis=1)[:, None]
-    col1.imshow(matrix_normed, origin='lower', cmap='viridis', aspect='auto')
-    if ntrain is not None:
-        col1.axhline(ntrain, color='white', linewidth=2, alpha=0.5)
-    col1.set_xlabel('features')
-    col1.set_ylabel('examples')
-
-
 def main():
     design_matrix, frequencies, times = np.load('coherence.npy',
                                                 encoding='bytes')
@@ -32,19 +18,11 @@ def main():
     print(nsamples, nfeatures)
 
     # Number of examples to use for training
-    # ntrain = 1000
     ntrain = 500
-
-    # label indices:
-    # 0: year, 1: month, 2:day, 3:hour, 4:min, 5:sec, 6:lat, 7:lon
-    # 8: depth, 9: M0, 10: Mw, 11:strike1, 12: dip1, 13: rake1, 14:strike2,
-    # 15:dip2, 16:rake2
 
     # normalize design matrix
     design_matrix /= design_matrix.max()
     design_matrix = 1. - design_matrix
-
-    plot(design_matrix, ntrain)
 
     # extract training data
     training_matrix = design_matrix[0:ntrain, :]

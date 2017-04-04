@@ -92,12 +92,19 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
  * layer (collection of units, can be defined with a matrix $W$ and bias $b$ with an activation function)
  * activation function examples: ReLU, sigmoid, tanh (and linear)
 
-### Course 12 (Mar 28, 16h room 3000)
-* simple neural network with TensorFlow 
+### Course 12 (Mar 28, 16h observatories)
+* simple neural network with TensorFlow
 * fit sine function with neural network
 * we saw the importance of initial values
+
+### Course 13 (Apr 4, 15h, room 3000)
+* how to chose the initial values and the activation functions together
+* activation functions for output units
+* fly above chapter 6: architectures of neural networks
+
+
 
 ### General objectives
 - [x] Go towards deep leanring
 - [x] Move to [Tensor Flow](https://www.tensorflow.org)
-- [ ] General theory of neural networks
+- [x] General theory of neural networks

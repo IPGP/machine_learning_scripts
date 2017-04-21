@@ -13,9 +13,8 @@ def main():
     fmax = 0.2
     mask = frequencies < fmax
     design_matrix = design_matrix[:, mask]
-    design_matrix = design_matrix[:200, ::9]
+    design_matrix = design_matrix[:100:3, ::9]
     ntimes, nfreqs = design_matrix.shape
-    print(ntimes, nfreqs)
 
     # normalize design matrix
     design_matrix /= design_matrix.max()
@@ -28,19 +27,22 @@ def main():
     # Step 1: Convolution
     # for every point of the image, we will get a number for every feature
     # that appears in this environment
-    nfeatures = 15
-    w = 15
+    nfeatures = 5
+    w = 10
     w1 = tf.Variable(tf.random_uniform([w, w, 1, nfeatures], -1, 1))
     encoded = tf.nn.tanh(tf.nn.conv2d(x, w1, strides=[1, 1, 1, 1],
                                       padding='SAME'))
 
     # Step 2: Deconvolution
     w2 = tf.Variable(tf.random_uniform([w, w, nfeatures, 1], -1, 1))
-    decoded = tf.nn.tanh(tf.nn.conv2d(encoded, w2, strides=[1, 1, 1, 1],
+    decoded = tf.nn.sigmoid(tf.nn.conv2d(encoded, w2, strides=[1, 1, 1, 1],
                                       padding='SAME'))
 
     lsq_error = tf.sqrt(tf.reduce_mean(tf.square(x - decoded)))
-    cost = lsq_error
+    reg1 = tf.reduce_mean(tf.square(w1))
+    reg2 = tf.reduce_mean(tf.square(w2))
+    alpha = 1.
+    cost = lsq_error + alpha * (reg1 + reg2)
 
     # chose optimizer
     optimizer = tf.train.AdamOptimizer(0.001).minimize(cost)
@@ -67,7 +69,6 @@ def main():
         ax = plt.subplot2grid((4, 8), (irow, icol))
         ax_features.append(ax)
 
-
     fig.show()
     plt.pause(0.01)
 
@@ -82,19 +83,19 @@ def main():
 
         for istep in range(nsteps):
             o, c = sess.run([optimizer, cost],
-                    feed_dict={x: x0[None, :, :, None]})
+                            feed_dict={x: x0[None, :, :, None]})
             cost_history[istep] = c
 
             if (istep % 100 == 0):
                 print('Loss at step {}: {}'.format(istep, c))
                 pre_labels = sess.run(decoded, feed_dict={x: x0[None, :, :, None]})
-                feature_map = sess.run(w1)
+                feature_map = sess.run(w2)
 
                 im_decoded.set_data(pre_labels[0, :, :, 0])
 
                 for iax, ax in enumerate(ax_features):
                     ax.cla()
-                    ax.imshow(feature_map[:, :, 0, iax])
+                    ax.imshow(feature_map[:, :, iax, 0])
 
                 ax10.cla()
                 ax10.plot(cost_history[:istep], c='C0')

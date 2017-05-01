@@ -25,7 +25,7 @@ def main():
     data = data.transpose((3, 1, 2, 0))
     data = preprocess_input(data)
 
-    model.predict(data)
+    # model.predict(data)
 
     feature_maps = []
     for ilayer, layer in enumerate(model.layers):

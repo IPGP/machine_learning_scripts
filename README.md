@@ -102,9 +102,15 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * activation functions for output units
 * fly above chapter 6: architectures of neural networks
 
+### Course 14 (Apr 13 (?))
+* convolutional neural networks
+* autoencoder
 
+### Course 15 (May 5)
+* VGG 16
+* style transfer
 
-### General objectives
-- [x] Go towards deep leanring
-- [x] Move to [Tensor Flow](https://www.tensorflow.org)
-- [x] General theory of neural networks
+### some remaining objectives
+- [] restricted Boltzmann machines
+- [] autoencoder loss functions
+- [] sparse coding

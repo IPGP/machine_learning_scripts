@@ -111,6 +111,6 @@ This working groups mainly is based on the online book [Deep Learning](http://ww
 * style transfer
 
 ### some remaining objectives
-- [] restricted Boltzmann machines
-- [] autoencoder loss functions
-- [] sparse coding
+- [ ] restricted Boltzmann machines
+- [ ] autoencoder loss functions
+- [ ] sparse coding
